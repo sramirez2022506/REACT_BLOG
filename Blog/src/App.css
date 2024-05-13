@@ -262,8 +262,9 @@ body{
 }
 
 .WartyF{
-  height: 45vh;
+  height: 30vh;
   padding-left: 35%;
+  padding-top: 10px;
   margin: 0;
 }
 
@@ -340,8 +341,8 @@ body{
 }
 
 .lolN{
-  height: 35vh;
-  padding-top: 5%;
+  height: 15vh;
+  padding-top: 10%;
   padding-left: 17%;
   padding-right: 17%;
 }
@@ -350,11 +351,13 @@ body{
   height: 20vh;
   padding-left: 15%;
   padding-top: 10%;
+  padding-bottom: 5%;
   
 }
 
 .link-decoration{
   text-decoration: none;
+  padding-bottom: 10%;
 }
 
 #botonArriba{
@@ -364,3 +367,56 @@ body{
   width: 45px;
   transition: all 1s;
 }
+
+.input {
+  border: 2px solid transparent;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.input:hover,
+.input:focus {
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+.contenedor-mensaje{
+  border: 2px solid transparent;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.contenedor-mensaje:hover, .textarea-comentario:focus{
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+.contenedor-comentario{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #69a5a4;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.h1-comentarios{
+  display: flex;
+  padding-left: 2%;
+}
+

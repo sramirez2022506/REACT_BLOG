@@ -2,13 +2,51 @@ import React, {useState, useEffect} from 'react'
 import jojo from './assets/Jojo-removebg-preview.png'
 import Node from './assets/img/NodeJs.png'
 import react from './assets/img/react.png'
-import WartyF from './assets/img/Warty2-removebg-preview.png'
+import WartyF from './assets/img/Warty4.jpg'
 import wartyContactos from './assets/img/Warty1-removebg-preview.png'
-import lol from './assets/img/LolNivel.png'
+import lol from './assets/img/Recurso 2-8.png'
 import arrow from './assets/img/corner-left-up.png'
 import './App.css'
 
+
 function App() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "http://localhost:8080/portfolio/v1/messages",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      const result = await response.json();
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", message: "" });
+      } else {
+        alert("Failed to send message: " + result.error);
+      }
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      alert("Failed to send message due to an error.");
+    }
+  };
+
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -29,9 +67,9 @@ function App() {
 
   return (
     <div className='Body'>
-      <div className='contenedor'>
+      <div className='contenedor' id='principio'>
         <header className="encabezado">
-          <p id='principio'>Pensastes que era un portafolio pero en realidad era yo!</p>
+          <p>Pensastes que era un portafolio pero en realidad era yo!</p>
           <h1>Sebastian Ramirez <img className='jojo' src={jojo} alt="jojo" /></h1>
         </header>
         <nav className="menu">
@@ -71,7 +109,7 @@ function App() {
       <form className='Cuadrado' action="">
           <form  className='Cuadrado-mini' action="">
             <p className="pie-de-pagina">
-              <p>Mi hobby es el arte de los videojuegos, me gustan diferentes tipos de videojuegos, sin embargo creo que mis favoritos son los juegos en los que se tiene que competir contra otra persona, el mayor ejemplo el Lol.</p>
+              <p>Como logo personal tengo el de la imagen actual, el contexto de el porque los colores y el tipo de letra realmente no son muy profundos, en teoria los colores representan lo alegre que o feliz que suelo ser, la letra pixelArt porque me gustan los juegos en 8-bits y el gato por lo mismo de que me gustan, Warty ya que es mi sobrenombre.</p>
             </p>
           </form>
           <img className="lolN" src={lol} alt="" />
@@ -249,19 +287,54 @@ function App() {
     </div>
     </a>
         </form>
+
+        <h1 className='h1-comentarios' id='comentarios'>COMENTARIOS</h1>
       </div>
-      <div className='contenedor-titulo'>
-        <h1 id='comentarios'>COMENTARIOS</h1>
+      <div className='contenedor-comentario'>
+      <form
+      onSubmit={handleSubmit}
+    >
+      <div className='contenedor-comentario'>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Escribe tu nombre aqui"
+          className="contenedor-mensaje"
+        />
+      </div>
+      <div className='contenedor-comentario'>
+        <textarea
+          id="message"
+          name="message"
+          required
+          value={formData.message}
+          onChange={handleChange}
+          className="contenedor-mensaje"
+          placeholder="Escribe tu mensaje"
+
+        />
+      </div>
+      <button
+        type="submit"
+        className="button"
+      >
+        Enviar
+      </button>
+    </form>
       </div>
       {showButton && (
         <a href="#principio">
           <img id='botonArriba' src={arrow} alt="flecha" />
         </a>
-        
       )}
     </div>
   )
 }
+
 
 export default App
 
