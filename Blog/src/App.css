@@ -269,8 +269,8 @@ body{
 
 .card {
   --bg: #f7f7f8;
-  --hover-bg: #FFE5F4;
-  --hover-text: #E50087;
+  --hover-bg: #69a5a4;
+  --hover-text: #b1d4b6;
   max-width: 23ch;
   text-align: center;
   background: var(--bg);
@@ -351,4 +351,16 @@ body{
   padding-left: 15%;
   padding-top: 10%;
   
+}
+
+.link-decoration{
+  text-decoration: none;
+}
+
+#botonArriba{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  transition: all 1s;
 }

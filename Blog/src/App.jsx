@@ -1,27 +1,44 @@
+import React, {useState, useEffect} from 'react'
 import jojo from './assets/Jojo-removebg-preview.png'
-import logo from './assets/img/Recurso 2-8.png'
 import Node from './assets/img/NodeJs.png'
-import mg from './assets/img/MongoDB.png'
 import react from './assets/img/react.png'
 import WartyF from './assets/img/Warty2-removebg-preview.png'
 import wartyContactos from './assets/img/Warty1-removebg-preview.png'
 import lol from './assets/img/LolNivel.png'
+import arrow from './assets/img/corner-left-up.png'
 import './App.css'
 
 function App() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 500) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
 
   return (
     <div className='Body'>
       <div class="contenedor">
         <header class="encabezado">
-          <p>Este portafolio no era el tuyo! ¡Era el mio!</p>
+          <p id='principio'>Pensastes que era un portafolio pero en realidad era yo!</p>
           <h1>Sebastian Ramirez <img className='jojo' src={jojo} alt="jojo" /></h1>
         </header>
         <nav class="menu">
             <ul>
-                <li><button className='button' href="#aboutme">Acerca de mi</button></li>
-                <li><button className='button' href="#Projectos">Projectos</button></li>
-                <li><button className='button' href="#comentarios">Comentarios</button></li>
+                <li><a href="#aboutme"><button className='button'>Acerca de mi</button></a></li>
+                <li><a href="#Proyectos"><button className='button'>Proyectos</button></a></li>
+                <li><a href="#comentarios"><button className='button'>Comentarios</button></a></li>
             </ul>
             <br />
             <br />
@@ -29,7 +46,7 @@ function App() {
         </nav>
     </div>
     <div className='contenedor-titulo'>
-      <h1>SOBRE MI</h1>
+      <h1 id='aboutme'>SOBRE MI</h1>
     </div>
       <div className='ContenedorForm'>
         <form action="" className='Cuadrado'>
@@ -150,42 +167,53 @@ function App() {
         </form>
       </div>
       <div className='contenedor-titulo'> 
-        <h1>PROYECTOS</h1>
+        <h1 id='Proyectos'>PROYECTOS</h1>
         <form action="" className='form-proyectos'>
+          <a className='link-decoration' href="https://github.com/sramirez2022506/REACT_Almacenadora.git">
+        <div class="card">
+    <div class="icon">
+    <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path class="st0" d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"></path>
+    </svg>
+    </div>
+        <strong> Almacenadora
+      </strong>
+    <div class="card__body">
+        Proyecto hecho en react con el proposito de practica, siendo este estatico pero util como ejemplo.
+    </div>
+      <span>Mira ahora</span>
+    </div>
+    </a>
+
+    <a className='link-decoration' href="https://github.com/agonzalez2022198/KinePolis.git">
         <div class="card">
     <div class="icon">
         <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.984 16.815c2.596 0 4.706-2.111 4.706-4.707 0-1.409-.623-2.674-1.606-3.538-.346-.303-.735-.556-1.158-.748-.593-.27-1.249-.421-1.941-.421s-1.349.151-1.941.421c-.424.194-.814.447-1.158.749-.985.864-1.608 2.129-1.608 3.538 0 2.595 2.112 4.706 4.706 4.706zm.016-8.184c1.921 0 3.479 1.557 3.479 3.478 0 1.921-1.558 3.479-3.479 3.479s-3.479-1.557-3.479-3.479c0-1.921 1.558-3.478 3.479-3.478zm5.223.369h6.777v10.278c0 2.608-2.114 4.722-4.722 4.722h-14.493c-2.608 0-4.785-2.114-4.785-4.722v-10.278h6.747c-.544.913-.872 1.969-.872 3.109 0 3.374 2.735 6.109 6.109 6.109s6.109-2.735 6.109-6.109c.001-1.14-.327-2.196-.87-3.109zm2.055-9h-12.278v5h-1v-5h-1v5h-1v-4.923c-.346.057-.682.143-1 .27v4.653h-1v-4.102c-1.202.857-2 2.246-2 3.824v3.278h7.473c1.167-1.282 2.798-2 4.511-2 1.722 0 3.351.725 4.511 2h7.505v-3.278c0-2.608-2.114-4.722-4.722-4.722zm2.722 5.265c0 .406-.333.735-.745.735h-2.511c-.411 0-.744-.329-.744-.735v-2.53c0-.406.333-.735.744-.735h2.511c.412 0 .745.329.745.735v2.53z"></path>
+        <path class="st0" d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"></path>
         </svg>
     </div>
-        <strong> Instagram
+        <strong> KinePolis
       </strong>
     <div class="card__body">
-        Get UI elements that help you stand out.
+        Programa web en el que se utilizo javascript con el fin de crear una pagina de gestion de cine.
     </div>
-      <span>Follow us</span>
+      <span>Mira ahora</span>
     </div>
-    <div class="card">
-    <div class="icon">
-        <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.984 16.815c2.596 0 4.706-2.111 4.706-4.707 0-1.409-.623-2.674-1.606-3.538-.346-.303-.735-.556-1.158-.748-.593-.27-1.249-.421-1.941-.421s-1.349.151-1.941.421c-.424.194-.814.447-1.158.749-.985.864-1.608 2.129-1.608 3.538 0 2.595 2.112 4.706 4.706 4.706zm.016-8.184c1.921 0 3.479 1.557 3.479 3.478 0 1.921-1.558 3.479-3.479 3.479s-3.479-1.557-3.479-3.479c0-1.921 1.558-3.478 3.479-3.478zm5.223.369h6.777v10.278c0 2.608-2.114 4.722-4.722 4.722h-14.493c-2.608 0-4.785-2.114-4.785-4.722v-10.278h6.747c-.544.913-.872 1.969-.872 3.109 0 3.374 2.735 6.109 6.109 6.109s6.109-2.735 6.109-6.109c.001-1.14-.327-2.196-.87-3.109zm2.055-9h-12.278v5h-1v-5h-1v5h-1v-4.923c-.346.057-.682.143-1 .27v4.653h-1v-4.102c-1.202.857-2 2.246-2 3.824v3.278h7.473c1.167-1.282 2.798-2 4.511-2 1.722 0 3.351.725 4.511 2h7.505v-3.278c0-2.608-2.114-4.722-4.722-4.722zm2.722 5.265c0 .406-.333.735-.745.735h-2.511c-.411 0-.744-.329-.744-.735v-2.53c0-.406.333-.735.744-.735h2.511c.412 0 .745.329.745.735v2.53z"></path>
-        </svg>
-    </div>
-        <strong> Instagram
-      </strong>
-    <div class="card__body">
-        Get UI elements that help you stand out.
-    </div>
-      <span>Follow us</span>
-    </div>
+    </a>
         </form>
       </div>
       <div className='contenedor-titulo'>
-        <h1>COMENTARIOS</h1>
-        
+        <h1 id='comentarios'>COMENTARIOS</h1>
       </div>
+      {showButton && (
+        <a href="#principio">
+          <img src={arrow} alt="flecha" style={{ position: 'fixed', right: '20px', bottom: '20px' }} />
+        </a>
+      )}
     </div>
   )
 }
 
 export default App
+
+
