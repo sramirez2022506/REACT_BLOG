@@ -29,12 +29,12 @@ function App() {
 
   return (
     <div className='Body'>
-      <div class="contenedor">
-        <header class="encabezado">
+      <div className='contenedor'>
+        <header className="encabezado">
           <p id='principio'>Pensastes que era un portafolio pero en realidad era yo!</p>
           <h1>Sebastian Ramirez <img className='jojo' src={jojo} alt="jojo" /></h1>
         </header>
-        <nav class="menu">
+        <nav className="menu">
             <ul>
                 <li><a href="#aboutme"><button className='button'>Acerca de mi</button></a></li>
                 <li><a href="#Proyectos"><button className='button'>Proyectos</button></a></li>
@@ -51,7 +51,7 @@ function App() {
       <div className='ContenedorForm'>
         <form action="" className='Cuadrado'>
           <form action="" className='Cuadrado-mini'>
-          <p class="pie-de-pagina">
+          <p className="pie-de-pagina">
             <p>Hola, soy Sebastian Ramirez Giron (Mis amigos me conocen como Warty) y soy un desarrollador web principiante que aspira a siempre mejorar en todos los aspectos posibles.</p>
           </p> 
           </form>
@@ -70,7 +70,7 @@ function App() {
       <div className='ContenedorForm'>
       <form className='Cuadrado' action="">
           <form  className='Cuadrado-mini' action="">
-            <p class="pie-de-pagina">
+            <p className="pie-de-pagina">
               <p>Mi hobby es el arte de los videojuegos, me gustan diferentes tipos de videojuegos, sin embargo creo que mis favoritos son los juegos en los que se tiene que competir contra otra persona, el mayor ejemplo el Lol.</p>
             </p>
           </form>
@@ -84,8 +84,8 @@ function App() {
           </form>
           <ul class="wrapper">
   <a href="https://www.facebook.com/profile.php?id=100010020378075">
-  <li class="icon facebook">
-    <span class="tooltip">Facebook</span>
+  <li className="icon facebook">
+    <span className="tooltip">Facebook</span>
     <svg
       viewBox="0 0 320 512"
       height="1.2em"
@@ -99,11 +99,11 @@ function App() {
   </li>
   </a>
   <a href="https://github.com/sramirez2022506">
-  <li class="icon github">
-    <span class="tooltip">Github</span>
+  <li className="icon github">
+    <span className="tooltip">Github</span>
     <svg
           viewBox="0 0 16 16"
-          class="bi bi-github"
+          className="bi bi-github"
           height="23"
           width="23"
           xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +115,11 @@ function App() {
   </li>
   </a>
   <a href="https://www.instagram.com/wartyot/">
-  <li class="icon instagram">
-    <span class="tooltip">Instagram</span>
+  <li className="icon instagram">
+    <span className="tooltip">Instagram</span>
     <svg
           viewBox="0 0 16 16"
-          class="bi bi-instagram"
+          className="bi bi-instagram"
           height="23"
           width="23"
           xmlns="http://www.w3.org/2000/svg"
@@ -131,11 +131,11 @@ function App() {
   </li>
   </a>
   <a href="https://www.linkedin.com/">
-  <li class="icon linkedin">
-    <span class="tooltip">linkedin</span>
+  <li className="icon linkedin">
+    <span className="tooltip">linkedin</span>
     <svg
           viewBox="0 0 16 16"
-          class="bi bi-linkedin"
+          className="bi bi-linkedin"
           height="23"
           width="23"
           xmlns="http://www.w3.org/2000/svg"
@@ -147,11 +147,11 @@ function App() {
   </li>
   </a>
   <a href="https://discord.com/channels/@me">
-  <li class="icon discord">
-    <span class="tooltip">Discord</span>
+  <li className="icon discord">
+    <span className="tooltip">Discord</span>
     <svg
           viewBox="0 0 16 16"
-          class="bi bi-discord"
+          className="bi bi-discord"
           height="23"
           width="23"
           xmlns="http://www.w3.org/2000/svg"
@@ -170,15 +170,15 @@ function App() {
         <h1 id='Proyectos'>PROYECTOS</h1>
         <form action="" className='form-proyectos'>
           <a className='link-decoration' href="https://github.com/sramirez2022506/REACT_Almacenadora.git">
-        <div class="card">
-    <div class="icon">
+        <div className="card">
+    <div className="icon">
     <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"></path>
+        <path className="st0" d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"></path>
     </svg>
     </div>
         <strong> Almacenadora
       </strong>
-    <div class="card__body">
+    <div className="card__body">
         Proyecto hecho en react con el proposito de practica, siendo este estatico pero util como ejemplo.
     </div>
       <span>Mira ahora</span>
@@ -186,15 +186,15 @@ function App() {
     </a>
 
     <a className='link-decoration' href="https://github.com/agonzalez2022198/KinePolis.git">
-        <div class="card">
-    <div class="icon">
+        <div className="card">
+    <div className="icon">
         <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <path class="st0" d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"></path>
+        <path className="st0" d="M343.656,451.109C410,411.438,454.422,338.906,454.422,256c0-125.484-101.719-227.219-227.203-227.219 C101.719,28.781,0,130.516,0,256s101.719,227.219,227.219,227.219H512v-32.109H343.656z M318.484,145.875 c23.547-13.594,53.641-5.531,67.234,18.016s5.531,53.656-18.016,67.25c-23.547,13.578-53.641,5.516-67.234-18.016 C286.859,189.563,294.938,159.469,318.484,145.875z M300.453,297.688c13.609-23.547,43.703-31.609,67.25-18.016 c23.547,13.609,31.609,43.703,18.016,67.25s-43.688,31.609-67.25,18.016C294.938,351.344,286.859,321.234,300.453,297.688z M227.219,72.375c27.188,0,49.219,22.031,49.219,49.219s-22.031,49.25-49.219,49.25s-49.25-22.063-49.25-49.25 S200.031,72.375,227.219,72.375z M249.938,256c0,12.563-10.172,22.719-22.719,22.719c-12.563,0-22.719-10.156-22.719-22.719 s10.156-22.719,22.719-22.719C239.766,233.281,249.938,243.438,249.938,256z M68.703,163.891 c13.594-23.547,43.703-31.609,67.25-18.016s31.609,43.688,18.016,67.25c-13.594,23.531-43.703,31.609-67.25,18.016 C63.188,217.547,55.109,187.438,68.703,163.891z M135.969,364.938c-23.563,13.594-53.656,5.531-67.266-18.016 c-13.578-23.547-5.516-53.656,18.016-67.266c23.547-13.594,53.656-5.516,67.25,18.031S159.5,351.344,135.969,364.938z M177.969,389.203c0-27.188,22.063-49.234,49.25-49.234s49.219,22.047,49.219,49.234s-22.031,49.234-49.219,49.234 S177.969,416.391,177.969,389.203z"></path>
         </svg>
     </div>
         <strong> KinePolis
       </strong>
-    <div class="card__body">
+    <div className="card__body">
         Programa web en el que se utilizo javascript con el fin de crear una pagina de gestion de cine.
     </div>
       <span>Mira ahora</span>
@@ -207,7 +207,7 @@ function App() {
       </div>
       {showButton && (
         <a href="#principio">
-          <img src={arrow} alt="flecha" style={{ position: 'fixed', right: '20px', bottom: '20px' }} />
+          <img id='botonArriba' src={arrow} alt="flecha" />
         </a>
       )}
     </div>
