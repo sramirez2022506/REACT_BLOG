@@ -25,7 +25,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:8080/portfolio/v1/messages",
+        "http://localhost:8080/blog/v1/messages",
         {
           method: "POST",
           headers: {
@@ -36,14 +36,14 @@ function App() {
       );
       const result = await response.json();
       if (response.ok) {
-        alert("Message sent successfully!");
+        alert("Mensaje enviado!");
         setFormData({ name: "", message: "" });
       } else {
-        alert("Failed to send message: " + result.error);
+        alert("Error al mandar el mensaje: " + result.error);
       }
     } catch (error) {
-      console.error("Failed to send message:", error);
-      alert("Failed to send message due to an error.");
+      console.error("Error al mandar el mensaje:", error);
+      alert("Fallo al mandar el mensaje dado el error.");
     }
   };
 
